@@ -1,4 +1,5 @@
 const useInputValidator = (type: string, input: string) => {
+    if (!input) return ''
     const alphaRegex = /^[a-zA-Z]+$/;
     const numberRegex = /^[0-9]+$/;
 
