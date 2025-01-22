@@ -28,8 +28,9 @@ import { ref, computed } from "vue";
 import axios from "axios";
 import { useUserDataStore } from "~/store/userDataStore";
 
+const router = useRouter()
 const userDataStore = useUserDataStore()
-const { setUserData, getUserData } = userDataStore
+const { setUserData } = userDataStore
 
 const user_id = ref<string | null>(null);
 const errorText = ref<string | null>(null);
@@ -50,6 +51,7 @@ const handleLogin = async () => {
       `http://localhost:3000/api/auth/${user_id.value}`
     );
     setUserData(response.data.data)
+    navigateTo('/dashboard')
 } catch (error: any) {
     if (error.status === 404) {
       errorText.value = "User not found";
