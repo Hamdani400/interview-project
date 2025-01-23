@@ -11,5 +11,5 @@ export const useUserDataStore = defineStore('user_data', {
         setUserData(value: Object) {
             this.user_data = value;
         }
-    }
+    },
 })

@@ -1,33 +1,19 @@
 <template>
-    <div>
-      <h1>Welcome to the dashboard Page</h1>
-      <p>This is the main entry point of the application.</p>
-      <p>{{ getUserData.name }}</p>
-      <p>{{ user_id }}</p>
-      <button @click="handleLogout">log out</button>
+    <div class="w-screen h-[93vh] align-middle justify-center flex bg-[#e2e8f0]">
+      <div class="w-1/2 mt-[10vh] mb-auto h-fit px-3 bg-white overflow-hidden">
+        <recursive-row :level="0" :data="getUserData"/>
+      </div>
     </div>
   </template>
   
   <script setup>
+  import RecursiveRow from "~/components/RecursiveRow.vue";
+
+  definePageMeta({
+  layout: 'dashboard-skeleton',
+});
   import { useUserDataStore } from "~/store/userDataStore";
 
  const user_data = useUserDataStore()
  const { getUserData } = user_data
- const user_id = useCookie('user_id')
-
- const handleLogout = () => {
-  try {
-    console.log('logout')
-    user_id.value = null
-    // window.location.reload()
-  } catch (e) {
-    console.log(e)
-  }
- }
   </script>
-  
-  <style scoped>
-  h1 {
-    color: #3498db;
-  }
-  </style>
