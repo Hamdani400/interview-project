@@ -1,16 +1,12 @@
 <template>
-    <div>
-      <h1>Welcome to the Home VIPPP</h1>
-      <p>This is the main entry point of the application.</p>
-    </div>
-  </template>
-  
-  <script setup>
-  // You can add script logic here if needed
-  </script>
-  
-  <style scoped>
-  h1 {
-    color: #3498db;
-  }
-  </style>
+  <div class="flex flex-col justify-center items-center mt-[30vh] min-w-screen">
+    <h1 class="text-6xl">👑</h1>
+    <h1 class="text-7xl text-green-500 font-bold">Welcome Back VIP</h1>
+  </div>
+</template>
+
+<script setup>
+definePageMeta({
+  layout: "dashboard-skeleton",
+});
+</script>

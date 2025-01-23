@@ -4,7 +4,7 @@
       <h1 class="text-white font-bold text-xl">FrontEnd Test</h1>
       <nav>
         <ul class="text-white flex">
-          <li class="px-4 hover:bg-[#60a5fa] cursor-pointer py-1 mx-3">
+          <li @click="navigateTo('/dashboard/vip')" class="px-4 hover:bg-[#60a5fa] cursor-pointer py-1 mx-3">
             Open VIP
           </li>
           <li @click="handleLogout" class="px-4 hover:bg-[#60a5fa] cursor-pointer py-1 mx-3">

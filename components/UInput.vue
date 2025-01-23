@@ -24,7 +24,7 @@ interface Props {
 const props = defineProps<Props>();
 const emit = defineEmits(["update:modelValue"]);
 
-const errorMessage = ref<string>("");
+const errorMessage = ref<string | null>("");
 
 const handleInput = (event: Event) => {
   errorMessage.value = useInputValidator(

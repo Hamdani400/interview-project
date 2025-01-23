@@ -11,7 +11,7 @@ const useInputValidator = (type: string, input: string) => {
 
     const isValid = type === 'number' ? numberRegex.test(input) : alphaRegex.test(input);
 
-    return !isValid ? errorMessageList[type] : ''
+    return !isValid ? errorMessageList[type] : null
 }
 
 export default useInputValidator
