@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="bg-[#3b82f6] px-4 py-5 flex justify-between">
-      <h1 class="text-white font-bold text-xl">FrontEnd Test</h1>
+      <h1 @click="navigateTo('/dashboard')" class="text-white font-bold text-xl">FrontEnd Test</h1>
       <nav>
         <ul class="text-white flex">
           <li @click="navigateTo('/dashboard/vip')" class="px-4 hover:bg-[#60a5fa] cursor-pointer py-1 mx-3">

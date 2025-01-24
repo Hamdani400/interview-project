@@ -28,7 +28,6 @@ import { ref, computed } from "vue";
 import axios from "axios";
 import { useUserDataStore } from "~/store/userDataStore";
 
-const router = useRouter()
 const userDataStore = useUserDataStore()
 const { setUserData } = userDataStore
 
